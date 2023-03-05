@@ -1,0 +1,24 @@
+{
+  "name": "bookcorner",
+  "version": "1.0.0",
+  "description": "App with client and server side that offers a search for books coming from GoogleBooks API",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "start": "concurrently --kill-others \"npm run start:client\" \"npm run start:server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiancaMunt/BookCorner.git"
+  },
+  "author": "Bianca Munteanu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BiancaMunt/BookCorner/issues"
+  },
+  "homepage": "https://github.com/BiancaMunt/BookCorner#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
