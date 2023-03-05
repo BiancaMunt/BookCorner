@@ -36,15 +36,12 @@ To get started with the app, clone the repository and install the dependencies:
     npm run start
 
 4. To see Docker in action, run the following commands
-> Builds the images for both the client and server: 
     ```
       docker-compose build
     ```
-> Starts the containers for both services:
     ```
       docker-compose up
     ```
-> App should then be accesible on port 3000
 
 5. Troubleshooting
   * If you're having trouble accessing the app at http://localhost:3000, make sure that the Docker containers are running correctly by running `docker ps` and checking the status of the containers.
