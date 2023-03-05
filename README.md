@@ -29,7 +29,7 @@ To get started with the app, clone the repository and install the dependencies:
 
 2. Install both client and server side dependencies
     ```sh
-    npm run install
+    npm install
     npm run install-client
     npm run install-server
 
