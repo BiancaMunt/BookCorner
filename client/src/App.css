@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+#submitButton {
+  margin-top: 5px;
+}

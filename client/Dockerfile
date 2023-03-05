@@ -1,5 +1,5 @@
 # Use an official Node runtime as a parent image
-FROM node:latest
+FROM node:latest as build
 
 # Set the working directory in the container
 WORKDIR /client
@@ -16,8 +16,7 @@ COPY . .
 # Build the React app for production
 RUN npm run build
 
-# Serve the React app using nginx
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+# Serve the React app using http-server
+RUN npm install -g http-server
 EXPOSE 3000
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["http-server", "-p", "3000", "build"]

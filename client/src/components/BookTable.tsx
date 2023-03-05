@@ -28,8 +28,8 @@ const BookTable: React.FC<Props> = ({ books }) => {
   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
 
 	const renderTableRows = () => {
-    return currentBooks.map((book) => (
-      <tr key={book.id}>
+    return currentBooks.map((book, index) => (
+      <tr key={index}>
         <td><img src={book.thumbnail} alt={book.title} /></td>
         <td>{book.title}</td>
         <td>{book.authors.join(', ')}</td>

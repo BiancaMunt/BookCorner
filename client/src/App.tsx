@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BookTable from "./components/BookTable";
+import './App.css'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -40,17 +41,17 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Google Books Search</h1>
+      <h1 className="h1 text-info">Google Books Search</h1>
       <form onSubmit={handleSearch}>
         <input
           type="text"
           id="searchTerm"
           placeholder="Book title"
-          className="form-control mt-10"
+          className="form-control"
           value={searchTerm}
           onChange={event => setSearchTerm(event.target.value)}
         />
-        <div className="mt-10">
+        <div id="submitButton">
           <button type="submit" className="btn btn-outline-primary" disabled={isLoading}>Search</button>
         </div>
       </form>
